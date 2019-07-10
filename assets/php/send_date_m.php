@@ -17,8 +17,8 @@ $from = "From: $name <$email>";
 wp_mail( $m_to, $email, $message, $from );
 
 // Put your MailChimp API and List ID hehe
-$api_key = 'f71dd4881fcf34145a64d8a86ee7ef77-us17';
-$list_id = 'e74e0d4569';
+$api_key = '';
+$list_id = '';
 // Let's start by including the MailChimp API wrapper
 include('MailChimp.php');
 // Then call/use the class

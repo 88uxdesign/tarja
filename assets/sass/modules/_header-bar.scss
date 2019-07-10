@@ -1,0 +1,195 @@
+.top-header-bar-container {
+  width: 100%;
+  position: fixed;
+  height: 44px;
+  box-shadow: 0 1px 4px rgba(#000000, 0.30);
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: $color__header_bg;
+  color: lighten($color__header_bg, 30%);
+  a, p, i, span, input {
+    color: lighten($color__header_bg, 20%);
+  }
+
+  a {
+    &:hover {
+      i {
+        color: lighten($color__header_bg, 40%);
+      }
+    }
+  }
+  vertical-align: middle;
+  .top-header-bar {
+    li {
+      float: right;
+      line-height: 44px;
+      &:first-child {
+        float: left;
+      }
+      &.top-search {
+
+        width: 65%;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        float: left;
+        padding: 0;
+        input {
+          background: $color__header_bg;
+          border: none;
+          color: lighten($plattes, 40%);
+          font-size: 15px;
+          margin: 4px 0;
+          width: 80%;
+          padding: 4px;
+          height: 36px;
+          transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+
+          @media (max-width: 992px) {
+          width:120px;
+        }
+
+          &:focus {
+            transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+            background:lighten($plattes, 20%);
+            color: lighten($plattes, 50%);
+          }
+        }
+        form{
+          width: 100%;
+        }
+        #search-top-bar-submit {
+          border: none;
+          background: lighten($plattes, 20%);
+          margin: 4px 0 4px -18px;
+          padding: 4px;
+          height: 36px;
+          width:36px;
+          position: relative;
+          font-size: 14px;
+          display: inline-block;
+          float: right;
+        }
+      }
+
+
+      &.top-cart {
+        width: 74px;
+        height: 44px;
+        text-align: center;
+        padding-left: 4px;
+        padding-right: 4px;
+        float: right;
+        background: $color__brand-primary;
+        &:hover {
+          background: $color__brand-primary-hover;
+        }
+        a {
+            font-size: 11px;
+
+            i::before{
+              font-size: 120%;
+              margin-right: 4px;
+            }
+
+          &:hover {
+            i {
+              color: lighten($plattes, 30%);
+            }
+          }
+        }
+      }
+      &.top-multilang {
+        margin-right: 15px;
+        border-left: 1px solid #353940;
+        position: relative;
+        min-width: 115px;
+        &:after {
+          content: '\f107';
+          position: relative;
+          display: inline-block;
+          color: lighten($plattes, 30%);
+          font-family: 'FontAwesome';
+        }
+
+        .multilang-toggle {
+          margin-left: 15px;
+
+          img {
+            margin-right: 5px;
+            margin-bottom: 3px;
+            display: inline-block;
+          }
+        }
+
+        img {
+          width: 20px;
+          position: relative;
+        }
+
+      }
+      &.top-account {
+        background: $color__header_bg;
+        width: 40px;
+        text-align: center;
+        float: right;
+
+        a {color: $color__brand-primary;
+          &:hover {
+            color: $color__brand-primary;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        display: inline-block;
+        border: none;
+        float: none;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        &.top-account, &.top-multilang {
+          border-left: none;
+          margin-right: 0;
+        }
+        &.top-multilang {
+          .multilang-toggle {
+            margin-left: 0;
+          }
+        }
+
+        &.top-search {
+          text-align: center;
+          .pull-right {
+            float: none !important;
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        &.top-search {
+          margin-left:40px;
+          width:166px;
+          text-align: center;
+          .pull-right {
+            float: none !important;
+          }
+          text-align: right;
+        }
+      }
+    }
+  }
+  .top_col{
+    width: 100%;
+    @media (min-width: 992px) {
+    width: 50%;
+  }
+    display: inline-block;
+    position: relative;;
+    float: right;
+  }
+}
+
+/*--------------------------------------------------------------
+# Multilang menu
+--------------------------------------------------------------*/
+@import "multilang/main";

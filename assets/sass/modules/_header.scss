@@ -1,0 +1,130 @@
+.site-header {
+  background: $plattes;
+  padding-top: 80px;
+  .banner-wide {
+    float: right;
+  }
+  .custom-logo-link {
+    width: 100%;
+    img {
+      width: 12%;
+      height: auto;
+      opacity: 0.3;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+      &:hover{
+        opacity: 1;
+        @include transform(rotate(-360deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+      }
+    }
+    display:block;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .site-title{
+    display:block;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .header-logo{
+   text-align: center;
+   color: $color__header_bg;
+   header{
+     margin-bottom: 50px;
+     h1{
+       font-family: $font__code;
+       color: $color__header_bg;
+       font-variant-caps: all-small-caps;
+     }
+     span{
+       font-size: 14px;
+     }
+   }
+  }
+
+  @media (max-width: 767px) {
+    .header-logo {
+      text-align: center;
+      .custom-logo-link {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        img{
+          height: 200px;
+          width: auto;
+
+          @media screen and(max-width: 767px) {
+      height: 100px;
+          }
+
+        }
+
+      }
+    }
+
+    .menu-toggle {
+      padding: 5px;
+    }
+  }
+
+}
+
+.header-banner {
+  text-align: right;
+  @media screen and(max-width: 767px) {
+    margin-top:15px;
+  }
+  .tarja-adsense {
+    width: 728px;
+    height: 90px;
+    display: block;
+  }
+  .tarja-adsense:before {
+    display: none !important;
+  }
+  .tarja-adsense ins {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+  }
+
+  @media screen and (max-width: 991px) {
+    .tarja-adsense {
+      width: 720px;
+      height: 90px;
+    }
+    .tarja-adsense:before {
+      content: '991';
+    }
+  }
+
+  .adsense__loading {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .9);
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .adsense--loaded .adsense__loading {
+    display: none;
+  }
+
+  .adsense__loading span {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.site-description {
+  margin-bottom: 0;
+}

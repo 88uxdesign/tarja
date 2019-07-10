@@ -1,0 +1,188 @@
+.main-slider {
+  position: relative;
+  margin-bottom: 80px;
+  .owl-theme .owl-nav {
+    margin-top: 0;
+  }
+
+  .hero-caption {
+    position: absolute;
+    width: 40%;
+    @media(max-width: 991px) {
+    width: 60%;
+
+    }
+    top: 30%;
+    span, a, i, p, h1, h2, h3, h4, h5, h6 {
+      color: #FFF;
+    }
+    &.left {
+      left: 20%;
+    }
+    &.center {
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    &.right {
+      right: 20%;
+    }
+    .year {
+        padding: 2%;
+      font-family:$font__main;
+      font-size: 78px;
+      font-weight: lighter;
+
+        @media(max-width: 991px) {
+  font-size: 28px;
+
+        }
+    }
+    .caption {
+      padding: 2%;
+        background: rgba(#000000, 0.69) ;
+      font-size: 18px;
+      font-weight: 100;
+      display: inline-block;
+      width:100%;
+      margin-bottom:2%;
+      @media(max-width: 991px) {
+      font-size: 12px;
+
+      }
+
+    }
+    .btn-group {
+      a {
+        display: inline-block;
+        @extend .button;
+        border: solid;
+        color: $color__header_bg;
+        border-width: 1px;
+        border-color: $color__brand-primary;
+        font-weight: 700;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        @media(max-width: 991px) {
+        font-size: 13px;
+
+        }
+
+        &:hover {
+          background: $color__brand-primary-hover;
+          border-color: $color__brand-primary-hover;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+        }
+        &:last-of-type {
+          border-color: $color__header_bg;
+          background: transparent;
+          margin-left: 15px;
+          &:hover {
+            color: $color__header_bg;
+            background: $color__brand-primary;
+            border-color: $color__brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .main-slider-previous, .main-slider-next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    @include transform(translateY(-75%));
+    i {
+      color: $color__brand-primary;
+      font-size: 69px;
+    }
+    &:hover {
+      i {
+        color: lighten($color__brand-primary, 20%);
+      }
+    }
+  }
+  .main-slider-previous {
+    left: 10%;
+  }
+  .main-slider-next {
+    right: 10%;
+  }
+
+  .main-slider-bar {
+
+$this_color:lighten($color__header_bg,20%);
+
+    background: $color__header_bg;
+    color: $color__brand-primary;
+    span, a, i, p, h1, h2, h3, h4, h5, h6 {
+      color: $this_color;
+    }
+    .main-slider-info {
+      display: inline-block;
+      padding: 14px 0 14px;
+      margin-top: 5px;
+      width: 100%;
+      li {
+        display: inline-block;
+        @media(min-width: 768px) {
+          &:first-of-type {
+            border-right: 1px solid $this_color;
+          }
+          &:last-of-type {
+            border-left: 1px solid $this_color;
+          }
+        }
+        .cell-icon {
+          font-size: 28px;
+          display: inline-block;
+          position: relative;
+          line-height: 32px;
+          float: left;
+          .dashicons {
+            width: initial;
+            height: initial;
+            font-size: 30px;
+            vertical-align: middle;
+          }
+        }
+        .cell-content {
+          float: left;
+          margin-left: 15px;
+        }
+        .cell-caption {
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 700;
+          display: block;
+          position: relative;
+        }
+        .cell-subcaption {
+          font-size: 12px;
+          display: block;
+          position: relative;
+        }
+
+        @media(max-width: 991px) {
+          .cell-caption {
+            font-size: 16px;
+            line-height: 16px;
+          }
+          .cell-subcaption {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home_news{
+  header{
+    width: 100%;
+    h3{width: 100%; display: block; text-align: center; font-family: $font__main; font-size:36px;}
+    margin-bottom: 80px;
+  }
+}

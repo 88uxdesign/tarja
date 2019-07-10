@@ -1,0 +1,220 @@
+
+.pages_child{
+  div{
+    img{
+      width: 100%;
+      opacity: 0.5;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+    }
+    h5{
+      font-family: $font__main;
+    }
+
+    &:hover{
+      img{opacity: 1;}
+
+    }
+  }
+}
+.registers{
+  padding: 10% 4% 10% 4%;
+  background: $plattes;
+  text-align: center;
+  margin-top: 80px;
+  h2,h3{
+    color: lighten($plattes, 30%);
+    font-family: $font__main;
+  }
+
+form{
+  max-width: 600px;
+  display: inline-block;
+  position: relative;
+  input {
+    background: lighten($plattes, 15%);
+    border: none;
+    color: lighten($plattes, 30%);
+    font-size: 15px;
+    margin: 4px 2px;
+    width: 100%;
+    padding: 8px;
+    height: 44px;
+    transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+}
+}
+
+.site-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $plattes;
+  color: #e3e3e3;
+  font-size: 15px;
+
+  .tarja-contact-p {
+    margin-bottom: 15px;
+    strong {
+      color: lighten($plattes, 30%);
+    }
+    i {
+      margin-right: 8px;
+      color: lighten($plattes, 30%);
+    }
+  }
+
+  .widget {
+    font-size: 15px;
+    margin-bottom: 30px;
+    ul {
+      li {
+        a {
+          color: lighten($plattes, 30%);
+          &:hover, &:focus {
+            color: $color__brand-primary;
+          }
+        }
+      }
+    }
+
+    .styled-select {
+      overflow: hidden;
+      select {
+        color: lighten($plattes, 30%);
+        padding: 5px;
+        width: 100%;
+        option {
+          color: $color__title;
+        }
+      }
+      &:after {
+        z-index: 1;
+      }
+    }
+
+    &.widget_search {
+      input {
+        background: transparent;
+        color: lighten($plattes, 30%);
+      }
+    }
+    &.widget_product_search {
+      input[type="submit"] {
+        position: relative;
+        display: inline-block;
+        margin-top: 5px;
+        background: $color__brand-primary;
+        color: lighten($plattes, 30%);
+      }
+    }
+    &.widget_shopping_cart {
+      ul {
+        li {
+          a {
+            color: lighten($plattes, 30%);
+            &:hover, &:focus {
+              color: $color__brand-primary;
+            }
+          }
+        }
+      }
+    }
+
+    &.widget_tarja_recent {
+      .tarja-recent-post-widget {
+        .tarja-post-content {
+          p {
+            a {
+              color: lighten($plattes, 30%);
+              &:hover, &:focus {
+                color: $color__brand-primary;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    .product_list_widget {
+      li {
+        a {
+          color: lighten($plattes, 30%);
+          &:hover, &:focus {
+            color: $color__brand-primary;
+          }
+        }
+        a > span {
+          color: lighten($plattes, 30%);
+          &:hover, &:focus {
+            color: $color__brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: lighten($plattes, 40%);
+    margin-top: 0;
+    margin-bottom: 45px;
+    span {
+      font-size: 20px;
+      color: lighten($plattes, 30%);
+      position: relative;
+      &:before {
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        content: '';
+        display: block;
+        background: lighten($plattes, 40%);
+      }
+    }
+  }
+
+  ul, ol, a, p, span, i {
+    color: lighten($plattes, 30%);
+    font-size: 15px;
+  }
+  ul {
+    > li {
+
+      &:before {
+        color: lighten($plattes, 30%) !important;
+      }
+    }
+  }
+
+  .widget_meta, .widget_categories, .widget_archive {
+    ul {
+      li {
+        a {
+          color: lighten($plattes, 30%)
+        }
+      }
+    }
+  }
+}
+
+.site-copyright {
+  background: $color__header_bg;
+  line-height: 80px;
+  font-size: 15px;
+  color: lighten($color__header_bg, 10%);
+  a, p, span, i {
+    color: lighten($color__header_bg, 20%);
+  }
+  a {
+    &:hover {
+      color: lighten($color__header_bg, 40%);
+    }
+  }
+  .sep {
+    margin: 0 10px;
+  }
+}
